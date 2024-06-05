@@ -22,7 +22,7 @@ public class Configuration {
     public RestClient getRestClient() {
         final CredentialsProvider credentialsProvider = new BasicCredentialsProvider();
         credentialsProvider.setCredentials(AuthScope.ANY, new UsernamePasswordCredentials("", ""));
-        return RestClient.builder(new HttpHost("localhost", 9200))
+        return RestClient.builder(new HttpHost("136.228.158.126", 3125))
                 .setHttpClientConfigCallback(httpClientBuilder -> {
                     httpClientBuilder.disableAuthCaching();
                     httpClientBuilder.setDefaultHeaders(List.of(

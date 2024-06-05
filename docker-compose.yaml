@@ -4,32 +4,32 @@ version: '3.8'
 
 services:
 
-#  makara-spring:
-#    container_name: 'Spring_elastic_search_suggestion'
-##    depends_on:
-##      - elasticsearch
-#    build:
-#      context: .
-#      dockerfile: Dockerfile
-#    environment:
-#      - ELASTICSEARCH_URL=http://136.228.158.126:9200
-#      - ELASTICSEARCH_HOSTS=http://136.228.158.126:9200
-#      - ELASTICSEARCH_USERNAME=elastic
-#    ports:
-#      - '8888:8888'
-#    volumes:
-#      - '/myproject:/home/ite/media'
-#    networks:
-#      - elastic8
-  pgsync-python:
-    build: ../../Test-in-local-elastic/spring_elastic_search_user/pgsync-python
-    container_name: pgsync-python
+  makara-spring:
+    container_name: 'Spring_elastic_search_suggestion'
 #    depends_on:
 #      - elasticsearch
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - ELASTICSEARCH_URL=http://136.228.158.126:3125
+      - ELASTICSEARCH_HOSTS=http://136.228.158.126:3125
+      - ELASTICSEARCH_USERNAME=elastic
+    ports:
+      - '3127:8888'
     volumes:
-      - ./pgsync-python:/app
+      - '/myproject:/home/ite/media'
 #    networks:
 #      - elastic8
+#  pgsync-python:
+#    build: ../../Test-in-local-elastic/spring_elastic_search_user/pgsync-python
+#    container_name: pgsync-python
+##    depends_on:
+##      - elasticsearch
+#    volumes:
+#      - ./pgsync-python:/app
+##    networks:
+##      - elastic8
 
 #
 #
